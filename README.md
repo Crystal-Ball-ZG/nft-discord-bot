@@ -43,7 +43,7 @@ Authorization: bearer MINTING_SERVER_TOKEN
     {
       “address”: string,
       "discordUserId": string,
-      “roles”:  string[]
+      “roles”:  [{ "name": string, "id": string }]
     }
 }
 ```
