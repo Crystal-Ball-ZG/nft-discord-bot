@@ -41,8 +41,9 @@ Authorization: bearer MINTING_SERVER_TOKEN
   "command": "claim",
   "payload":
     {
-      “address”: String, 
-      “roles”:  String[]
+      “address”: string,
+      "discordUserId": string,
+      “roles”:  string[]
     }
 }
 ```
@@ -58,6 +59,6 @@ Status:
 	| 500 - server error
 
 {
-  “message”: String
+  “message”: string
 }
 ```
