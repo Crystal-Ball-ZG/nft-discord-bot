@@ -25,7 +25,14 @@ This repo should only contain a package with the bot service without any hosting
 
 **Authorization:**
 Every call made to the minting server web hooks will have to be authenticated with a token. The writer of this bot only needs to supply it from the env as implementation of the bot will be handled internally by zeitgeist.  The token can be referred to with `process.env.MINTING_SERVER_TOKEN`
- **[https://avatar-bsr.zeitgeist.pm/webhooks/seer/discord]** **Request:**
+
+### claim
+
+**URL:** https://avatar-bsr.zeitgeist.pm/webhooks/seer/discord
+
+**Method:** POST
+
+**Request:**
 ```
 Content-Type: application/json
 Authorization: bearer MINTING_SERVER_TOKEN
