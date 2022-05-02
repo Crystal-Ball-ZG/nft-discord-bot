@@ -10,7 +10,7 @@ The bot needs to listen for the `/claim $address` command on a particular channe
 _The bot is not required to do any checks for exiting NFTs. All double mint prevention and locking logic is handled by the minting server._
 
 #### ✅ Typescript.
-The bot needs to be written in typescript with source files in the `src` folder and the built filed in the `dist` folder.
+The bot needs to be written in typescript with source files in the `src` folder and the built files in the `dist` folder.
 
 #### ✅ Throttling.
 Throttle the calls to the minting server, if the user spams the /claim command, only one request every five second should pass through to the actual minting server.
