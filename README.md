@@ -52,7 +52,7 @@ Authorization: bearer MINTING_SERVER_TOKEN
 Content-Type: application/json
 Status: 
 	  200 - one or more nfts where minted
-	| 204 - request was successfull, but nothing was claimed
+	| 204 - request was successfull, but nothing new to claim/mint
 	| 400 - the request body was not formatted correctly.
 	| 500 - server error
 
