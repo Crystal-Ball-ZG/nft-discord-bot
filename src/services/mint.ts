@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-import { IDiscordRole } from '../interfaces/IDiscordRole';
+import { IDiscordRole } from '../interfaces/IDiscordRole'
 
 type MintResponse = {
   message: string
@@ -17,7 +17,7 @@ const STATUS = {
   204: 'Request was successfull, but nothing new to claim/mint.',
   400: 'The request body was not formatted correctly.',
   401: 'Unautorized/invalid token.',
-  500: 'Server Error.'
+  500: 'Server Error.',
 }
 
 const getMessage = (status: number, message: string) => {
@@ -31,25 +31,24 @@ export default {
         'https://avatar-bsr.zeitgeist.pm/webhooks/seer/discord',
         {
           command: 'claim',
-          payload
+          payload,
         },
         {
           headers: {
             'Content-Type': 'application/json',
             Accept: 'application/json',
-            Authorization: process.env.MINTING_SERVER_TOKEN as string
-          }
-        }
+            Authorization: process.env.MINTING_SERVER_TOKEN as string,
+          },
+        },
       )
 
       return {
-        message: getMessage(response.status, response.data.message)
+        message: getMessage(response.status, response.data.message),
       }
-      
-    } catch(err: any) {
+    } catch (err: any) {
       return {
-        message: getMessage(err.response?.status, err.response?.data.message)
+        message: getMessage(err.response?.status, err.response?.data.message),
       }
     }
-  }
+  },
 }
