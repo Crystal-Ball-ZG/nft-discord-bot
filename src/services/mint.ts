@@ -1,5 +1,4 @@
 import axios from 'axios'
-import { join } from 'path'
 
 import { IDiscordRole } from '../interfaces/IDiscordRole'
 
