@@ -17,7 +17,6 @@
     "axios": "^0.27.2",
     "discord-api-types": "^0.34.0",
     "discord.js": "^13.8.0",
-    "node-mock-server": "^0.25.4",
     "slash-command-builder": "^0.1.1"
   },
   "devDependencies": {
