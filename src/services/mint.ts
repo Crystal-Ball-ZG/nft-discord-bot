@@ -43,8 +43,6 @@ export default {
         },
       )
 
-      console.log(response)
-
       return {
         message: getMessage(response.status, response.data.message),
       }
