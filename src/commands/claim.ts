@@ -36,11 +36,14 @@ export const claim: ICommand = {
       }
 
       const response = await api.mint({
-        address,
-        discordUserId: interaction.user.id,
-        roles: (interaction?.member?.roles as any).member.roles.cache.map(
-          (r: any) => ({ name: r.name, id: r.id }),
-        ),
+        command: 'claim',
+        payload: {
+          address,
+          discordUserId: interaction.user.id,
+          roles: (interaction?.member?.roles as any).member.roles.cache.map(
+            (r: any) => ({ name: r.name, id: r.id }),
+          ),
+        },
       })
 
       await interaction.reply(response.message)

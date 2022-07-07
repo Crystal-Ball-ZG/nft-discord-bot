@@ -8,9 +8,12 @@ type MintResponse = {
 }
 
 type MintRequest = {
-  address: string
-  discordUserId: string
-  roles: Array<IDiscordRole>
+  command: 'claim'
+  payload: {
+    address: string
+    discordUserId: string
+    roles: Array<IDiscordRole>
+  }
 }
 
 const STATUS = {
@@ -29,11 +32,8 @@ export default {
   mint: async (payload: MintRequest) => {
     try {
       const response = await axios.post<MintResponse>(
-        new URL(process.env.API_URl, '/webhooks/seer/discord').href,
-        {
-          command: 'claim',
-          payload,
-        },
+        new URL('/webhooks/seer/discord', process.env.API_URL).href,
+        payload,
         {
           headers: {
             'Content-Type': 'application/json',
@@ -42,6 +42,8 @@ export default {
           },
         },
       )
+
+      console.log(response)
 
       return {
         message: getMessage(response.status, response.data.message),
