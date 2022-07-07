@@ -452,6 +452,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node@npm:^18.0.3":
+  version: 18.0.3
+  resolution: "@types/node@npm:18.0.3"
+  checksum: 5dec59fbbc1186c808b53df1ca717dad034dbd6a901c75f5b052c845618b531b05f27217122c6254db99529a68618e4cfc534ae3dbf4e88754e9e572df80defa
+  languageName: node
+  linkType: hard
+
 "@types/strip-bom@npm:^3.0.0":
   version: 3.0.0
   resolution: "@types/strip-bom@npm:3.0.0"
@@ -3956,6 +3963,7 @@ __metadata:
     "@discordjs/rest": ^0.5.0
     "@polkadot/keyring": ^9.6.1
     "@polkadot/util": ^9.6.1
+    "@types/node": ^18.0.3
     axios: ^0.27.2
     discord-api-types: ^0.34.0
     discord.js: ^13.8.0

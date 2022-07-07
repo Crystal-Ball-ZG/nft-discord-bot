@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { join } from 'path'
 
 import { IDiscordRole } from '../interfaces/IDiscordRole'
 
@@ -28,7 +29,7 @@ export default {
   mint: async (payload: MintRequest) => {
     try {
       const response = await axios.post<MintResponse>(
-        'https://avatar-bsr.zeitgeist.pm/webhooks/seer/discord',
+        new URL(process.env.API_URl, '/webhooks/seer/discord').href,
         {
           command: 'claim',
           payload,
