@@ -6,6 +6,11 @@ export const validateEnv = (): void => {
     process.exit(1)
   }
 
+  if (!process.env.API_URL) {
+    logHandler.log('warn', 'Missing API_URL env.')
+    process.exit(1)
+  }
+
   if (!process.env.CLIENT_ID) {
     logHandler.log('warn', 'Missing CLIENT_ID env.')
     process.exit(1)
