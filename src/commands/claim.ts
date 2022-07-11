@@ -1,6 +1,5 @@
 import { SlashCommandBuilder } from '@discordjs/builders'
 import { CommandInteraction } from 'discord.js'
-import { setTimeout as wait } from 'node:timers/promises'
 
 import { ICommand } from '../interfaces/ICommand'
 import { isValidAddress } from '../utils/isValidAddress'
