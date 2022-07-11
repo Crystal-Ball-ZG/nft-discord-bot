@@ -37,7 +37,7 @@ export default {
           headers: {
             'Content-Type': 'application/json',
             Accept: 'application/json',
-            Authorization: process.env.MINTING_SERVER_TOKEN as string,
+            Authorization: process.env.CLIENT_TOKEN as string,
           },
         },
       )

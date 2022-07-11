@@ -20,9 +20,4 @@ export const validateEnv = (): void => {
     logHandler.log('warn', 'Missing GUILD_ID env.')
     process.exit(1)
   }
-
-  if (!process.env.MINTING_SERVER_TOKEN) {
-    logHandler.log('warn', 'Missing MINTING_SERVER_TOKEN env.')
-    process.exit(1)
-  }
 }
