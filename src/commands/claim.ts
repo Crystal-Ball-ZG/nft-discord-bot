@@ -28,7 +28,6 @@ export const claim: ICommand = {
       const addressIsValid = isValidAddress(address)
 
       if (!addressIsValid) {
-        console.log(`Invalid wallet address: ${address}`)
         return await interaction.reply({
           content: 'Invalid wallet address',
           ephemeral: true,
