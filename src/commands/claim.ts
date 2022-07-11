@@ -10,7 +10,7 @@ import api from '../services/mint'
 export const claim: ICommand = {
   data: new SlashCommandBuilder()
     .setName('claim')
-    .setDescription('Claim your NFT')
+    .setDescription('Claim your unminted Seer NFTs')
     .addStringOption(option =>
       option
         .setName('address')
