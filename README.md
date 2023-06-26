@@ -1,6 +1,9 @@
 # Zeitgeist Seer Badge Bot
 This is the repo for the zeitigeist seer program badge issuing discord bot.
 
+# DEPRECATED
+This bot code has been absorbed by our private service layer, but keeping it here for reference.
+
 ### Definitions
 - **Bot.** The discord bot nodejs process.
 - **Minting server.** Zeitgeist minting api that is called by the bot to mint. 
